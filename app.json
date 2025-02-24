@@ -23,6 +23,12 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "extra": {
+      "eas": {
+        "projectId": "e18e4c38-fd8b-4675-a8d8-dd42a43733d7"
+      }
+    },
+    "owner": "redearthbluesky"
   }
 }
