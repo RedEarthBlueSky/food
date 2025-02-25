@@ -1,4 +1,6 @@
-const em = 18
+import { StatusBar } from 'react-native'
+
+const em = 16
 
 const parentStyles = {
   h1: {fontSize: 2*em},
@@ -10,24 +12,29 @@ const parentStyles = {
   h6: {fontSize: 0.67*em},
 }
 
+const wrapperStyles = {
+  wrapper: {
+    // backgroundColor: 'red',
+    flex: 1,
+    padding: 15,
+    paddingTop: StatusBar.currentHeight,
+  }
+}
+
 const searchStyles = {
   // ...parentStyles,
   backgroundStyle: {
     backgroundColor: '#abdbe3',
-    borderColor: 'grey',
     borderRadius: 5,
-    borderWidth: 1,
     flexDirection: 'row',
     height: 50,
     justifyContent: 'center',
-    marginHorizontal: 17,
-    marginTop: 15,
-    paddingLeft: 10,
   },
   iconStyle: {
     alignSelf: 'center',
     color: 'grey',
     fontSize: 30,
+    marginHorizontal: 15,
   },
   inputStyle: {
     flex: 1,
@@ -35,4 +42,4 @@ const searchStyles = {
   },
 }
 
-export { parentStyles, searchStyles }
+export { parentStyles, searchStyles, wrapperStyles }
