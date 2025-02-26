@@ -1,10 +1,10 @@
 import axios from "axios"
 import { APIKeys } from "../env/apikeys"
-
+//  console.log('Here are my keys', APIKeys)
 
 //  create axios instance
 export default axios.create({
-  baseURL: 'https://api.yelp.com/v3/businesses',
+  baseURL: APIKeys.BASE_URL,
   headers: {
     Authorization: `Bearer ${APIKeys.MY_API_KEY}`
   },
