@@ -1,17 +1,39 @@
 import { StatusBar } from 'react-native'
-
 const em = 16
-
+//  rename parentStyles to textStyles
 const parentStyles = {
+  bold: {fontWeight: 'bold'},
   h1: {fontSize: 2*em},
   h2: {fontSize: 1.5*em},
+  h2bold: {fontSize: 1.5*em, fontWeight: 'bold'},
   h3: {fontSize: 1.13*em},
+  h3bold: {fontSize: 1.13*em, fontWeight: 'bold'},
   h4: {fontSize: em},
-  p: {fontSize: em},
   h5: {fontSize: 0.83*em},
   h6: {fontSize: 0.67*em},
+  italic: {fontStyle: 'italic'},
+  p: {fontSize: em},
+  pbold: {fontSize: em, fontWeight: 'bold'},
 }
-
+const listStyles = {
+  ...parentStyles,
+  container: {
+    marginRight: 15,
+  },
+  image: {
+    borderRadius: 5,
+    height: 120,
+    width: 250,
+  },
+  resultsListContainer: {
+    marginBottom: 15,
+  },
+  rowContainer: {
+    alignItems: 'center',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+  }
+}
 const wrapperStyles = {
   wrapper: {
     // backgroundColor: 'red',
@@ -20,7 +42,6 @@ const wrapperStyles = {
     paddingTop: StatusBar.currentHeight,
   }
 }
-
 const searchStyles = {
   // ...parentStyles,
   backgroundStyle: {
@@ -41,5 +62,4 @@ const searchStyles = {
     fontSize: 1.13*em,
   },
 }
-
-export { parentStyles, searchStyles, wrapperStyles }
+export { listStyles, parentStyles, searchStyles, wrapperStyles }

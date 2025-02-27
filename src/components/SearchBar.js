@@ -21,4 +21,4 @@ const SearchBar = ({ term, onTermChange, onTermSubmit }) => {
   )
 }
 
-export default SearchBar
+export { SearchBar }
