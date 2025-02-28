@@ -1,10 +1,11 @@
-import { View, Text, FlatList } from 'react-native'
+import { View, Text, FlatList, TouchableOpacity } from 'react-native'
 import React from 'react'
+import { withNavigation } from 'react-navigation'
 import { ResultDetail } from './ResultDetail'
 import { listStyles } from '../styles/styles'
 const { container, h2bold, h4, resultsListContainer } = listStyles
 
-const ResultsList = ({title, results}) => {
+const ResultsList = ({title, results, navigation}) => {
   return (
     <View style={resultsListContainer}>
       <Text style={h2bold}>{title} </Text>
@@ -14,9 +15,15 @@ const ResultsList = ({title, results}) => {
         keyExtractor={result => result.id}
         renderItem={({ item }) => {
           return (
-            <View style={container}>
+            <TouchableOpacity 
+              style={container} 
+              onPress={() => {
+                navigation.navigate('ResultsShow', {id:  item.id,
+                }
+              )}}
+            >
               <ResultDetail result={ item }/>
-            </View>
+            </TouchableOpacity>
           )
         }}
         scrollEnabled
@@ -26,4 +33,4 @@ const ResultsList = ({title, results}) => {
   )
 }
 
-export { ResultsList }
+export default withNavigation(ResultsList)

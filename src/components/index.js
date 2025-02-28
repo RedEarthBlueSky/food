@@ -1,6 +1,6 @@
 import { SearchBar } from "./SearchBar"
 import { Wrapper } from "./Wrapper"
-import { ResultsList } from "./ResultsList"
+import ResultsList from "./ResultsList"
 import { ResultDetail } from './ResultDetail'
 
-export { ResultDetail, ResultsList, SearchBar, Wrapper }
+export { ResultDetail, SearchBar, Wrapper }
